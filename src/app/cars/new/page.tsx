@@ -11,8 +11,8 @@ type Props = {
 const NewCarPage: FC<Props> = async ({ searchParams }) => {
   const sp = await searchParams;
   const getFromSp = (k: string) => {
-    const v = sp[k];
-    return Array.isArray(v) ? (v[0] ?? "") : (v ?? "");
+    const value = sp[k];
+    return Array.isArray(value) ? (value[0] ?? "") : (value ?? "");
   };
 
   const errBrand = getFromSp("err_brand");
